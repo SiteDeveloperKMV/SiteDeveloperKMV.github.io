@@ -1,0 +1,346 @@
+// main-settings
+html{
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+}
+.h2(){
+        color: @header-text-color;
+        font-size: 5.4rem;
+        font-weight: 700;
+}
+.p () {
+    margin-top: 2.4rem;
+    font-size: 2rem;
+    color: @grey-text;
+}
+
+// button-settings
+.btn_orange {
+    padding: 1.5rem 6rem;
+    background-color: @orange;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        background-color: darken(@orange, 10%);
+    }
+}
+    
+.small_button {
+   padding: 1rem 3.5rem; 
+   background-color: #fff;
+   border: 1px solid #F6505C;
+   color: #F6505C;
+   font-size: 1.6rem;
+}
+
+// color-settings
+@orange: #ff4E2E;
+@main-text-color: #402529;
+@grey-text: #9B889E;
+@header-text-color: #462B2B;
+
+// main-section
+.main {
+    background-color: #FBFBFB;
+    &-header {
+        &-menu {
+            padding: 3rem 0;
+            a {
+            margin: 0 1rem;
+            color: @header-text-color;
+            font-size: 1.6rem;
+            &:hover {
+                text-decoration: none;
+                color: @header-text-color;
+                }
+                &:focus {
+                    color: #FC778E;
+                    border-bottom: 1px solid #FC778E;
+                }
+            } 
+        } 
+        &-contacts {
+            padding: 2rem 0;
+            a{
+                margin-right: 2rem;
+                color: @header-text-color;
+                font-size: 2.5rem;
+                font-weight: 700;
+                &:hover {
+                    color: @header-text-color;
+                    text-decoration: none;
+                    }
+                }
+            }
+        }
+        &-content {
+            &-text {
+                margin-top: 20rem;
+                margin-bottom: 4.6rem;
+                h1 {
+                    font-size: 7rem;
+                    font-weight: 700;
+                }
+                p {
+                    font-size: 2.5rem;
+                    color: @grey-text;
+                }
+            }
+        }
+    }
+    // Work section
+    .work {
+        padding: 10rem 0;
+        &-header {
+            h2 {
+             .h2();   
+            }
+        }
+        &-content {
+            margin: 9rem 0;
+            &-block {
+                p{
+                    .p();
+                }
+
+            }
+        }
+    }
+    // Portfolio section
+    .portfolio {
+        padding: 10rem 0;
+        &-header {
+            h2 {
+                .h2();
+            }
+        }
+        &-content {
+            margin: 9rem 0;
+            &-block {
+                p {
+                    .p();
+                }
+            }
+        }
+    }
+    // Adaptive section
+    .adaptive {
+        background-color: @orange;
+        padding: 8rem 2rem;
+        margin-bottom: 3rem;
+        &-header {
+            margin-left: 12rem;
+            
+            h3{
+                color: #FFFFFF;
+                font-size: 4.5rem;
+                font-weight: 700;
+            }
+            p {
+                color: #FFFFFF;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    // Contakts section
+    .contacts {
+        padding: 8rem 0;
+        &-menu {
+            a {
+                display: block;
+                font-size: 1.5rem;
+                color: @grey-text;
+                margin-bottom: 1.4rem;
+                &:hover {
+                    text-decoration: none;
+                    color: #FC778E;
+                }
+            }    
+        }
+        &_link {
+            a {
+                display: block;
+                margin-bottom: 3rem;
+                font-size: 1.8rem;
+                color: @main-text-color;
+                text-decoration: none;
+                &:hover {
+                    color: @header-text-color;
+                    text-decoration: none;    
+                }
+            }
+        }
+            
+        }
+        img {
+            margin-top: 1.5rem;
+            margin-right: 2rem;
+        }
+        .call {
+            display: block;
+        }
+    // Footer
+    footer {
+        padding: 3.5rem;
+        font-size: 1.6rem;
+        background-color: #31293C;
+        color: #FFFFFF;
+    }
+    @media (max-width: 991px) {
+        .main {
+            &-header {
+                &-menu {
+                    text-align: center;
+                }
+                &-contacts {
+                    text-align: center;
+                    display: block;
+                    a {
+                        text-align: center;
+                        margin-bottom: 5rem;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            &-content {
+                img {
+                    border: 3px solid grey;
+                }
+                button {
+                    text-align: center;
+                    margin: 0 12rem;
+                }
+                &-text {
+                    text-align: center;
+                }
+            }
+        }
+        .work {
+            &-content {
+                text-align: center;
+                &-block {
+                    border: 2px solid grey;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .portfolio {
+            &-content {
+                text-align: center;
+                &-block {
+                    border: 2px solid grey;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .contacts{
+            &-menu {
+                text-align: center;
+                a {
+                    display: inline-block;
+                    margin-right: 3rem;
+                }
+            }
+            &_link {
+                text-align: center;
+                margin: 3rem 0;
+            }
+            &-button {
+                text-align: center;
+            }
+            .sotial {
+                button {
+                    margin: auto;
+                }
+                text-align: center;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .main {
+            &-content {
+                h1 {
+                    font-size: 3rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+                .human {
+                    width: 80%;
+                    text-align: center;
+                }
+                button {
+                    font-size: 1rem;
+                    margin: auto;
+            }
+        }
+    }
+        .work {
+            h2 {
+                font-size: 4rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+            button {
+                font-size: 1rem;
+                margin: auto;
+            }
+        }
+        .portfolio {
+            h2 {
+                font-size: 3rem;
+            }
+            .portfolio-img {
+                width: 75%;
+            }
+            button {
+                font-size: 1rem;
+                margin: auto;
+            }
+    }
+    .adaptive {
+        margin-bottom: 2rem;
+        &-header{
+            text-align: center;
+            margin: 0;
+            padding: 0.1rem;
+            h3 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .contacts {
+        padding: 1rem 0;
+        &-menu {
+        a {
+            font-size: 2rem;
+            text-align: center;
+        }
+        } 
+        &_link {
+            a {
+                margin: 0;
+            font-size: 1.3rem;
+            }
+        } 
+    }
+    .footer {
+        font-size: 0.5rem;
+    }  
+}
